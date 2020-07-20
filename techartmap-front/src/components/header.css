@@ -1,0 +1,20 @@
+.haeder {
+	background-color: black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 1920px;
+	width: 100%;
+    margin: 0px;
+	color: white;
+	text-decoration: none;
+}
+.click:hover {
+	 
+	color: red;
+}
+.click{
+	
+	color: white;
+	text-decoration: none;
+}

@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import ReactDOM from 'react-dom';
+import './index.css';
+import EnterPage from './pages/enterPage/components/enterPage'
+import MainPage from './pages/mainPage/components/mainPage'
+import * as serviceWorker from './serviceWorker';
+import RegistrationPage from "./pages/registrationPage/components/registrarionPage"
+import AdminPage from "./pages/adminPage/components/adminPage"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<Router>
+    <Route path="/main" component={MainPage}/>
+    <Route path="/registration" component={props=><RegistrationPage{...props}/>}/>
+    <Route path="/enter" component={props=><EnterPage{...props}/>}/>
+    <Route path="/admin" component={AdminPage}/>
+  </Router>
   );
 }
 

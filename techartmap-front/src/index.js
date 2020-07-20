@@ -2,14 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import MainPage from './pages/mainPage/components/mainPage'
 import * as serviceWorker from './serviceWorker';
-
+import RegistrationPage from "./pages/registrationPage/components/registrarionPage"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 ReactDOM.render(
-  <React.StrictMode>
+  
+
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ 
+  ,
+    document.getElementById('root')
+  );
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
