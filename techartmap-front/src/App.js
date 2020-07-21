@@ -14,12 +14,12 @@ import {
 } from "react-router-dom";
 function App() {
   return (
-<Router>
-    <Route path="/main" component={MainPage}/>
-    <Route path="/registration" component={props=><RegistrationPage{...props}/>}/>
-    <Route path="/enter" component={props=><EnterPage{...props}/>}/>
-    <Route path="/admin" component={AdminPage}/>
-  </Router>
+    <Router>
+      <Route path="/main" component={MainPage} />
+      <Route path="/registration" component={props => <RegistrationPage{...props} />} />
+      <Route path="/enter" component={props => <EnterPage{...props} />} />
+      <Route path="/admin" component={AdminPage} />
+    </Router>
   );
 }
 

@@ -1,5 +1,7 @@
-let urls ={
-    ADD_USER:"https://localhost:44399/user/user",
-    CHECK_USER:"https://localhost:44399/user/sign-in"
+let origin = "https://localhost:44399/";
+let urls = {
+
+    ADD_USER: origin + "user/user",
+    CHECK_USER: origin + "user/sign-in"
 }
 export default urls;
