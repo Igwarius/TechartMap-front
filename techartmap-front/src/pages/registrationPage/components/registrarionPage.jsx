@@ -20,7 +20,7 @@ class RegistrationPage extends React.Component {
 
   handleSubmit = async () => {
 
-    let response = undefined;
+    let response;
     await axios.post(urls.ADD_USER, { login: this.state.login, password: this.state.password }).then(responsee => { response = responsee });
     if (response.status === 200) {
       this.props.history.push("/enter")
