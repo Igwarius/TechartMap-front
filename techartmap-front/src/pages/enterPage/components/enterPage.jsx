@@ -26,7 +26,7 @@ class EnterPage extends React.Component {
         localStorage.setItem('Token', response.data.token)
         let decode = jwt_decode(localStorage.getItem('Token'))
         if (decode[constants.TOKEN_PARAM + 'role'] === "User")
-          this.props.history.push("/main")
+          this.props.history.push("/")
         if (decode[constants.TOKEN_PARAM + 'role'] === "Admin")
           this.props.history.push("/admin")
       }

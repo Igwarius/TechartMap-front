@@ -12,10 +12,10 @@ class AddCityPage extends React.Component {
         if (localStorage.getItem('Token')) {
             let decode = jwt_decode(localStorage.getItem('Token'))
             if (decode[constants.TOKEN_PARAM + 'role'] === "User")
-                this.props.history.push("/main")
+                this.props.history.push("/")
         }
         else {
-            this.props.history.push("/main")
+            this.props.history.push("/")
         }
 
     }

@@ -5,6 +5,7 @@ import jwt_decode from 'jwt-decode'
 import urls from '../../../static/urls'
 import constants from '../../../static/constants'
 import './adminPage.css'
+import { Link } from 'react-router-dom'
 class AdminPage extends React.Component {
   constructor(props) {
     super(props);
@@ -12,10 +13,10 @@ class AdminPage extends React.Component {
     if (localStorage.getItem('Token')) {
       let decode = jwt_decode(localStorage.getItem('Token'))
       if (decode[constants.TOKEN_PARAM + 'role'] === "User")
-        this.props.history.push("/main")
+        this.props.history.push("/")
     }
     else {
-      this.props.history.push("/main")
+      this.props.history.push("/")
     }
   }
   render() {
@@ -24,8 +25,8 @@ class AdminPage extends React.Component {
         <Header />
         <div className="container">
           <h1>Страница администратора</h1>
-          <h2 className="button">Добавить город</h2>
-          <h2 className="button">Добавить киноеатр</h2>
+          <h2 className="button"><Link className="button" to="/add-city-page">Добавить город</Link></h2>
+          <h2 className="button"><Link className="button" to="/add-cinema-page">Добавить киноеатр</Link></h2>
           <h2 className="button">Добавить зал</h2>
         </div>
       </>
